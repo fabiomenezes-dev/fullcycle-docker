@@ -19,6 +19,8 @@ services:
     container_name: node-app
     working_dir: /usr/src/app
     command: ["node", "index.js"]
+    volumes:
+      - ./node:/usr/src/app
     depends_on:
       db:
         condition: service_healthy
